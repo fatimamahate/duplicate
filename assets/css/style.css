@@ -1,4 +1,12 @@
 body{
-    background-color: blue;
-    color: white;
+    background-color:#EEA47FFF;
+    color:#00539CFF;
+    font-family:  'Didact Gothic', sans-serif;
+    font-weight: bold;
+}
+
+h1{
+    font-family: 'Fredoka One', cursive;
+    text-align: center;
+    font-size: 4rem;
 }

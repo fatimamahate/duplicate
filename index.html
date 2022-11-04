@@ -4,11 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Fredoka+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Document</title>
+    <title>Duplicate</title>
 </head>
 <body>
-    <h1>Test Text</h1>
+    <h1>Duplicate</h1>
+    <div class="main-game">
+        <div class = "difficulty-container">
+            <button data-type="easy" class="diff diff-btn diff-easy">
+                Easy
+            </button>
+            <button data-type="difficult" class="diff diff-btn diff-difficult">
+                Difficult
+            </button>
+            <button data-type="impossible" class="diff diff-btn diff-impossible">
+                Impossible
+            </button>
+        </div>
+        <p>Are these images identical?</p>
+        <div class = "score-container">
+            Score: <span id="score">0</span>
+        </div>
+
+        <div class="image-container">
+            
+        </div>
+        
+        <div class="answer-area">
+            <button class="identical">
+                Identical
+            </button>
+            <button class="/identical">
+                Not Identical
+            </button>
+        </div>
+    </div>
     <script src="assets/js/script.js"></script>
 </body>
 </html>
