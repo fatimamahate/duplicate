@@ -2,11 +2,67 @@ body{
     background-color:#EEA47FFF;
     color:#00539CFF;
     font-family:  'Didact Gothic', sans-serif;
-    font-weight: bold;
+     font-weight: bold; 
 }
 
 h1{
     font-family: 'Fredoka One', cursive;
     text-align: center;
     font-size: 4rem;
+}
+
+.main-game{
+
+    box-sizing: border-box;
+    width: 85%;
+    height: 6vh;
+    max-height: 450px;
+    max-width: 830px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1%;
+}
+
+.difficulty-container{
+    text-align: center;
+}
+
+.diff{
+    border: 0.5rem solid;
+    margin:0 10px 0 10px;
+    border-radius: 45%;
+    width:30%;
+    padding: 3rem 0 3rem 0;
+    font-size:2rem;
+    color: #EEA47FFF;
+    background-color: #00539CFF;
+}
+
+.diff:hover{
+    color:#00539CFF;
+    font-weight: bold;
+}
+
+.diff-easy:hover{
+    background-color:rgb(236, 111, 111);
+}
+
+.diff-difficult:hover{
+    background-color:rgb(226, 125, 75);
+}
+
+.diff-impossible:hover{
+    background-color:rgb(202, 92, 41);
+}
+
+p{
+    text-align: center;
+    font-size:2rem;
+}
+
+.score-container{
+    text-align: center;
+    font-size:2rem;
+    color:#EEA47FFF;
+    background-color: #00539CFF;
 }
