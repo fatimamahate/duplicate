@@ -22,14 +22,23 @@ same:'Y'}
 let easyOne=[ePair1,ePair2,ePair3,ePair4,ePair5,ePair6];
 
 document.addEventListener("DOMContentLoaded",function( ){
-    if (this.getAttribute("data-type")==="easy"){
-
-    } else if (this.getAttribute("data-type")==="difficult"){
-
-    } else {
-        
-    }
+    let choices = document.getElementsByTagName("button")
     
+    for(let choice of choices){
+        choice.addEventListener("click",function() {
+        if (this.getAttribute("data-type")==="easy"){
+            alert("coongrats");
+        } else if (this.getAttribute("data-type")==="difficult"){
+            alert("cooongrats");
+        } else {
+            alert("coooongrats");
+        }
+    })
 })
+
+// function diffEasy(){
+    
+// }
+
 
 
