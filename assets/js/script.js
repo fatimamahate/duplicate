@@ -46,17 +46,17 @@ document.addEventListener("DOMContentLoaded",function(){
 function mainGame(level){
     if (level === 'easy'){
         let imgCheck=[];
-    while(imgCheck.length<5){
-        let random=Math.floor(Math.random()*6);
-        console.log(random)
-        if (imgCheck.includes(random)){
-           continue
-        } else {
-            imgCheck.push(random)
-            displayEasy(random);
-        }
-        console.log(imgCheck)
-     } 
+        while(imgCheck.length<5){
+            let random=Math.floor(Math.random()*6);
+            console.log(random)
+            if (imgCheck.includes(random)){
+            continue
+            } else {
+                imgCheck.push(random)
+                displayEasy(random);
+            }
+            console.log(imgCheck)
+        } 
     } else {
         alert("fig")
     }
