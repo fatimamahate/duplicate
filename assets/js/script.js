@@ -1,23 +1,23 @@
 /** 
  * Add all image pairs for the easy difficulty as objects with information on whether they match
  */
-let ePair0={img1:'url',
-img2:'url',
+let ePair0={img1:'./assets/images/easy/pair0/0.png',
+img2:'url1',
 same:'1'}
-let ePair1={img1:'url',
-img2:'url',
+let ePair1={img1:'./assets/images/easy/pair0/0.png',
+img2:'url1',
 same:'2'}
-let ePair2={img1:'url',
-img2:'url',
+let ePair2={img1:'./assets/images/easy/pair0/0.png',
+img2:'url2',
 same:'3'}
-let ePair3={img1:'url',
-img2:'url',
+let ePair3={img1:'./assets/images/easy/pair0/0.png',
+img2:'url2',
 same:'4'}
-let ePair4={img1:'url',
-img2:'url',
+let ePair4={img1:'./assets/images/easy/pair0/0.png',
+img2:'url3',
 same:'5'}
-let ePair5={img1:'url',
-img2:'url',
+let ePair5={img1:'./assets/images/easy/pair0/0.png',
+img2:'url3',
 same:'6'}
 
 let easyOne=[ePair0,ePair1,ePair2,ePair3,ePair4,ePair5];
@@ -74,10 +74,12 @@ function mainGame(level){
 
 function displayEasy(myArray){
     for (j=0;j<myArray.length;j++){
-        let test = easyOne[myArray[j]]
-        console.log(test);
-        // var myDiv = document.getElementById('images-container'); 
-        // myDiv.innerHTML = '<img src="' + myArray[j] + '" + />'; 
+        let round = easyOne[myArray[j]]
+        console.log(round); 
+        console.log(round.img1)
+        let firstImage=document.getElementById('img1').src = round.img1
+        console.log(firstImage);
+                
     }
 }
 // function displayDifficult(){
