@@ -1,24 +1,24 @@
 /** 
  * Add all image pairs for the easy difficulty as objects with information on whether they match
  */
-let ePair0={img1:'./assets/images/easy/pair0/0.png',
-img2:'url1',
-same:'1'}
-let ePair1={img1:'./assets/images/easy/pair0/0.png',
-img2:'url1',
-same:'2'}
-let ePair2={img1:'./assets/images/easy/pair0/0.png',
-img2:'url2',
-same:'3'}
-let ePair3={img1:'./assets/images/easy/pair0/0.png',
-img2:'url2',
-same:'4'}
-let ePair4={img1:'./assets/images/easy/pair0/0.png',
-img2:'url3',
-same:'5'}
-let ePair5={img1:'./assets/images/easy/pair0/0.png',
-img2:'url3',
-same:'6'}
+let ePair0={img1:'./assets/images/easy/0.png',
+img2:'./assets/images/easy/0.png',
+same:'Y'}
+let ePair1={img1:'./assets/images/easy/1_1.png',
+img2:'./assets/images/easy/1.2.png',
+same:'N'}
+let ePair2={img1:'./assets/images/easy/2.png',
+img2:'./assets/images/easy/2.png',
+same:'Y'}
+let ePair3={img1:'./assets/images/easy/3_1.png',
+img2:'./assets/images/easy/3_2.png',
+same:'N'}
+let ePair4={img1:'./assets/images/easy/4_1.png',
+img2:'./assets/images/easy/4_2.png',
+same:'N'}
+let ePair5={img1:'./assets/images/easy/5_1.png',
+img2:'./assets/images/easy/5_2.png',
+same:'N'}
 
 let easyOne=[ePair0,ePair1,ePair2,ePair3,ePair4,ePair5];
 
@@ -78,8 +78,9 @@ function displayEasy(myArray){
         console.log(round); 
         console.log(round.img1)
         let firstImage=document.getElementById('img1').src = round.img1
+        let secondImage=document.getElementById('img2').src = round.img2
         console.log(firstImage);
-                
+        console.log(secondImage)
     }
 }
 // function displayDifficult(){
