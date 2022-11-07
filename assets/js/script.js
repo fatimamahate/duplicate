@@ -34,6 +34,8 @@ document.addEventListener("DOMContentLoaded",function(){
                 alert("difficult")
             } else if (this.getAttribute("data-type") === "impossible") {
                 alert("impossible")
+            } else if (this.getAttribute("data-type")==="identical" || this.getAttribute("data-type")==="notidentical"){
+                var btnClicked = data-type;
             }
         });
     }
@@ -67,9 +69,7 @@ function mainGame(level){
     
 // }
 
-function gradeScore(){
-console.log('gradeScore test')
-}
+
 
 function displayEasy(myArray){
     for (j=0;j<myArray.length;j++){
@@ -80,16 +80,21 @@ function displayEasy(myArray){
         let secondImage=document.getElementById('img2').src = round.img2
         console.log(firstImage);
         console.log(secondImage);
-        document.getElementById('identical').addEventListener('click',function(){
-            if (round.same ==="Y"){
-                gradeScore();
+        function gradeScore(){
+            let y=round.same;
+            if(btnClicked ==="identical" && y==="Y"){
+                let oldScore = parseInt(document.getElementById("score").innerText);
+                document.getElementById("score").innerText = ++oldScore
+            } else if (btnClicked === "notidentical" && y === "Y"){
+                alert("Try again!");
+            } else if (btnClicked === "identical" && y === "N"){
+                alert("Try again!");
+            } else if (btnClicked === "notidentical" && y === "N"){
+                let oldScore = parseInt(document.getElementById("score").innerText);
+                document.getElementById("score").innerText = ++oldScore
             }
-        })
-        document.getElementById('notidentical').addEventListener('click',function(){
-            if (round.same==="N"){
-                gradeScore();
-            }
-        });
+        }
+        gradeScore()
     }
 }
 // function displayDifficult(){
