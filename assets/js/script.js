@@ -1,25 +1,26 @@
 /** 
  * Add all image pairs for the easy difficulty as objects with information on whether they match
  */
+let ePair0={img1:'url',
+img2:'url',
+same:'1'}
 let ePair1={img1:'url',
 img2:'url',
-same:'Y'}
+same:'2'}
 let ePair2={img1:'url',
 img2:'url',
-same:'Y'}
+same:'3'}
 let ePair3={img1:'url',
 img2:'url',
-same:'Y'}
+same:'4'}
 let ePair4={img1:'url',
 img2:'url',
-same:'Y'}
+same:'5'}
 let ePair5={img1:'url',
 img2:'url',
-same:'Y'}
-let ePair6={img1:'url',
-img2:'url',
-same:'Y'}
-let easyOne=[ePair1,ePair2,ePair3,ePair4,ePair5,ePair6];
+same:'6'}
+
+let easyOne=[ePair0,ePair1,ePair2,ePair3,ePair4,ePair5];
 
 document.addEventListener("DOMContentLoaded",function(){
     let choices = document.getElementsByTagName("button");
@@ -44,22 +45,23 @@ document.addEventListener("DOMContentLoaded",function(){
  * The full game is run in the main game function
  */
 function mainGame(level){
+    var imgCheck=[];
     if (level === 'easy'){
-        let imgCheck=[];
         while(imgCheck.length<5){
             let random=Math.floor(Math.random()*6);
             console.log(random)
             if (imgCheck.includes(random)){
             continue
             } else {
-                imgCheck.push(random)
-                displayEasy(random);
+                imgCheck.push(random);
             }
             console.log(imgCheck)
         } 
+        displayEasy(imgCheck);
     } else {
         alert("fig")
     }
+    
 }
 
 // function gradeAnswer(){
@@ -70,10 +72,14 @@ function mainGame(level){
 
 // }
 
-function displayEasy(random){
-    
+function displayEasy(myArray){
+    for (j=0;j<myArray.length;j++){
+        let test = easyOne[myArray[j]]
+        console.log(test);
+        // var myDiv = document.getElementById('images-container'); 
+        // myDiv.innerHTML = '<img src="' + myArray[j] + '" + />'; 
+    }
 }
-
 // function displayDifficult(){
 
 // }
