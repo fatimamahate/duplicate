@@ -106,16 +106,12 @@ h1{
     background-color: #00539CFF;
 }
 
-/* .image-container{
-    box-sizing: border-box;
+.image-container{
+    /* box-sizing: border-box; */
     height: 22vh;
-    border: 1px solid black;
-    
-} */
-
-#img1,#img2{
+    /* border: 1px solid black; */
     margin-top: 20px;
-    position: relative;
-    height:22vh;
 }
+
+
 

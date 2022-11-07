@@ -32,8 +32,7 @@ document.addEventListener("DOMContentLoaded",function(){
                mainGame(level)
             } else if (this.getAttribute("data-type") === "difficult") {
                 alert("difficult")
-            }
-            else if (this.getAttribute("data-type") === "impossible") {
+            } else if (this.getAttribute("data-type") === "impossible") {
                 alert("impossible")
             }
         });
@@ -65,22 +64,32 @@ function mainGame(level){
 }
 
 // function gradeAnswer(){
-
+    
 // }
 
-// function gradeScore(){
-
-// }
+function gradeScore(){
+console.log('gradeScore test')
+}
 
 function displayEasy(myArray){
     for (j=0;j<myArray.length;j++){
         let round = easyOne[myArray[j]]
         console.log(round); 
-        console.log(round.img1)
+        console.log(round.img1);
         let firstImage=document.getElementById('img1').src = round.img1
         let secondImage=document.getElementById('img2').src = round.img2
         console.log(firstImage);
-        console.log(secondImage)
+        console.log(secondImage);
+        document.getElementById('identical').addEventListener('click',function(){
+            if (round.same ==="Y"){
+                gradeScore();
+            }
+        })
+        document.getElementById('notidentical').addEventListener('click',function(){
+            if (round.same==="N"){
+                gradeScore();
+            }
+        });
     }
 }
 // function displayDifficult(){
