@@ -1,26 +1,26 @@
 /** 
  * Add all image pairs for the easy difficulty as objects with information on whether they match
  */
-let ePair0={img1:'./assets/images/easy/0.png',
+let easyOne=[
+{img1:'./assets/images/easy/0.png',
 img2:'./assets/images/easy/0.png',
-same:'Y'}
-let ePair1={img1:'./assets/images/easy/1_1.png',
+same:'Y'},
+{img1:'./assets/images/easy/1_1.png',
 img2:'./assets/images/easy/1.2.png',
-same:'N'}
-let ePair2={img1:'./assets/images/easy/2.png',
+same:'N'},
+{img1:'./assets/images/easy/2.png',
 img2:'./assets/images/easy/2.png',
-same:'Y'}
-let ePair3={img1:'./assets/images/easy/3_1.png',
+same:'Y'},
+{img1:'./assets/images/easy/3_1.png',
 img2:'./assets/images/easy/3_2.png',
-same:'N'}
-let ePair4={img1:'./assets/images/easy/4_1.png',
+same:'N'},
+{img1:'./assets/images/easy/4_1.png',
 img2:'./assets/images/easy/4_2.png',
-same:'N'}
-let ePair5={img1:'./assets/images/easy/5_1.png',
+same:'N'},
+{img1:'./assets/images/easy/5_1.png',
 img2:'./assets/images/easy/5_2.png',
-same:'N'}
+same:'N'}]
 
-let easyOne=[ePair0,ePair1,ePair2,ePair3,ePair4,ePair5];
 
 document.addEventListener("DOMContentLoaded",function(){
     let choices = document.getElementsByTagName("button");
