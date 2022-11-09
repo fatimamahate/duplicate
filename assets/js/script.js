@@ -65,6 +65,37 @@ let difficultOne=[
     img2:'./assets/images/difficult/9_2.png',
     same:'N'}]
 
+let impossibleOne=[{img1:'./assets/images/impossible/0_1.png',
+img2:'./assets/images/impossible/0_2.png',
+same:'N'},
+{img1:'./assets/images/impossible/1_1.png',
+img2:'./assets/images/impossible/1_2.png',
+same:'N'},
+{img1:'./assets/images/impossible/2_1.png',
+img2:'./assets/images/impossible/2_2.png',
+same:'N'},
+{img1:'./assets/images/impossible/3_1.png',
+img2:'./assets/images/impossible/3_2.png',
+same:'N'},
+{img1:'./assets/images/impossible/4.png',
+img2:'./assets/images/impossible/4.png',
+same:'Y'},
+{img1:'./assets/images/impossible/5.png',
+img2:'./assets/images/impossible/5.png',
+same:'Y'},
+{img1:'./assets/images/impossible/6_1.png',
+img2:'./assets/images/impossible/6_2.png',
+same:'N'},
+{img1:'./assets/images/impossible/7_1.png',
+img2:'./assets/images/impossible/7_2.png',
+same:'N'},
+{img1:'./assets/images/impossible/8_1.png',
+img2:'./assets/images/impossible/8_2.png',
+same:'N'},
+{img1:'./assets/images/impossible/9.png',
+img2:'./assets/images/impossible/9.png',
+same:'Y'},
+]
 var level;
 
 document.addEventListener("DOMContentLoaded",function(){
