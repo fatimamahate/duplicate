@@ -130,7 +130,13 @@
     /**
      * The full game is run in the main game function
      */
-     function round(){
+     function scoreCheck(){
+        scoreVal=parseInt(document.getElementById('score').innerText);
+        console.log(scoreVal);
+        document.getElementById('score').innerText = ++scoreVal;
+        
+    }
+    function roundCorrect(){
         currentRound+=1;
         console.log(currentRound);
         if (currentRound===maxNumOfRounds){
@@ -138,12 +144,14 @@
             location.reload();   
         }
     }
-    
-    function scoreCheck(){
-        scoreVal=parseInt(document.getElementById('score').innerText);
-        console.log(scoreVal);
-        document.getElementById('score').innerText = ++scoreVal;
-        ;
+
+    function roundIncorrect(){
+        currentRound+=1;
+        console.log(currentRound);
+        if (currentRound===maxNumOfRounds){
+            alert(`You tried the ${level} level and got ${scoreVal}! Why not give the other levels a go?`);
+            location.reload();   
+        }
     }
     
     function scoreReset(){
@@ -198,16 +206,16 @@
             let userAnswer = this.getAttribute("button-type");
             // console.log(userAnswer);
             if (userAnswer === "identical" && currentPair.same === 'Y'){
-                round();
+                roundCorrect();
                 scoreCheck(level);
                 mainGame(level);
             } else if(userAnswer === "notidentical" && currentPair.same === 'N'){
-                round();
+                roundCorrect();
                 scoreCheck(level);
                 mainGame(level);
             } else {
                 alert('You got it wrong!');
-                round();
+                roundIncorrect();
                 mainGame(level);
         return;
             }
