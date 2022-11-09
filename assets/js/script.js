@@ -48,6 +48,8 @@ document.addEventListener("DOMContentLoaded",function(){
 let currentPair;
 let currentArray;
 let scoreVal;
+let currentRound=0;
+const maxNumOfRounds = 5;
 
 
 
@@ -57,7 +59,6 @@ let scoreVal;
 function mainGame(level){
     // randomPair(level);
     if (level === "easy"){
-        scoreVal=0;
         currentArray=easyOne;
         let rand=Math.floor(Math.random()*currentArray.length);
         currentPair=currentArray[rand];
@@ -76,15 +77,17 @@ for (let button of answerBtn){
         let userAnswer = this.getAttribute("button-type")
         if (userAnswer === "identical" && currentPair.same === 'Y'){
             scoreCheck(level);
-            
+            round();
         } else if(userAnswer === "notidentical" && currentPair.same === 'N'){
             scoreCheck(level);
-            
+            round();
         } else {
             alert('You got it wrong!')
             mainGame(level)
+            round();
     return
         }
+        
     })
 }
 function scoreCheck(level){
@@ -95,10 +98,17 @@ function scoreCheck(level){
 }
 
 function scoreReset(){
-    // scoreVal=parseInt(document.getElementById('score').innerText);
     document.getElementById('score').innerText = "0";
 }
 
+function round(){
+    currentRound+=1;
+    console.log(currentRound)
+    if (currentRound===maxNumOfRounds){
+        alert(`You got ${scoreVal}/5` )
+        scoreReset();
+    }
+}
 
 
 
