@@ -24,7 +24,7 @@ same:false}]
 
 
 document.addEventListener("DOMContentLoaded",function(){
-    let choices = document.getElementsByTagName("button");
+    let choices = document.getElementsByClassName("diff");
     console.log(choices)
     for (let choice of choices){
         choice.addEventListener("click", function() {
@@ -62,31 +62,38 @@ function mainGame(level){
         displayOne.src=imageOne;
         var displayTwo=document.getElementById('img2');
         displayTwo.src=imageTwo;
-        scoreCheck()
     }
-}
 
-
-function scoreCheck(result){
-    if (currentPair.same === result){
-       let scoreVal= document.getElementById('score').innerText;
-       let score=parseInt(scoreVal);
-       document.getElementById('score').innertext=++score;
-    }     
-}
-
-
-let answerBtn=document.getElementsByClassName('answer-area');
-for (let button of answerBtn){
+    let answerBtn=document.getElementsByClassName('idn-btn');
+    for (let button of answerBtn){
     button.addEventListener('click',function(){
         let userAnswer = this.getAttribute("button-type")
-        if (userAnswer === "identical"){
-            scoreCheck(true);
+        if (userAnswer === "identical" && currentPair.same === true){
+            scoreCheck();
+        } else if(userAnswer === "notidentical" && currentPair.same === false){
+            scoreCheck();
         } else {
-            scoreCheck(false);
+            alert('You got it wrong! Start again!')
         }
     })
 }
+
+function scoreCheck(){
+    let scoreVal=parseInt(document.getElementById('score').innerText);
+    document.getElementById('score').innerText = ++scoreVal;
+}
+    // function scoreCheck(result){
+    //     if (currentPair.same === result){
+    //        let scoreVal= document.getElementById('score').innerText;
+    //        let score=parseInt(scoreVal);
+    //        document.getElementById('score').innertext=++score;
+    //     }     
+    // }
+}
+
+
+
+
 
 
 
