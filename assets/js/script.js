@@ -64,9 +64,10 @@ function mainGame(level){
         var displayTwo=document.getElementById('img2');
         displayTwo.src=imageTwo;
     }
+}
 
-    let answerBtn=document.getElementsByClassName('idn-btn');
-    for (let button of answerBtn){
+let answerBtn=document.getElementsByClassName('idn-btn');
+for (let button of answerBtn){
     button.addEventListener('click',function(){
         let userAnswer = this.getAttribute("button-type")
         if (userAnswer === "identical" && currentPair.same === true){
@@ -83,15 +84,12 @@ function mainGame(level){
         }
     })
 }
+
+
 function scoreCheck(){
     scoreVal=parseInt(document.getElementById('score').innerText);
     document.getElementById('score').innerText = ++scoreVal;
 }
-}
-
-
-
-
 
 
 
