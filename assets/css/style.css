@@ -26,6 +26,17 @@ h1{
   text-align:center;
 }
 
+ 
+
+.image-container{
+    display: flex;
+    justify-content: center
+}
+#img1, #img2{
+    /* width:auto; */
+    margin: 1%
+}
+
 .diff{
     border: 0.5rem solid;
     margin:0 10px 0 10px;
