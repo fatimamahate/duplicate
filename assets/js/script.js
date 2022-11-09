@@ -84,7 +84,7 @@ function mainGame(level){
     })
 }
 function scoreCheck(){
-   scoreVal=parseInt(document.getElementById('score').innerText);
+    scoreVal=parseInt(document.getElementById('score').innerText);
     document.getElementById('score').innerText = ++scoreVal;
 }
 }
