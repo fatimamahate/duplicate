@@ -44,6 +44,7 @@ document.addEventListener("DOMContentLoaded",function(){
     
 let currentPair;
 let currentArray;
+let scoreVal;
 
 
 
@@ -73,22 +74,18 @@ function mainGame(level){
         } else if(userAnswer === "notidentical" && currentPair.same === false){
             scoreCheck();
         } else {
-            alert('You got it wrong! Start again!')
+            alert('You got it wrong!')
+            scoreVal=parseInt(document.getElementById('score').innerText);
+            document.getElementById('score').innerText = --scoreVal;
+    return
         }
     })
 }
-
 function scoreCheck(){
-    let scoreVal=parseInt(document.getElementById('score').innerText);
+   scoreVal=parseInt(document.getElementById('score').innerText);
     document.getElementById('score').innerText = ++scoreVal;
 }
-    // function scoreCheck(result){
-    //     if (currentPair.same === result){
-    //        let scoreVal= document.getElementById('score').innerText;
-    //        let score=parseInt(scoreVal);
-    //        document.getElementById('score').innertext=++score;
-    //     }     
-    // }
+
 }
 
 
