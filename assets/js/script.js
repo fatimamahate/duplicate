@@ -118,6 +118,7 @@ document.addEventListener("DOMContentLoaded",function(){
         });
     }
 })
+
     
 let currentPair;
 let currentArray;
@@ -139,20 +140,22 @@ function mainGame(level){
         let imageTwo=currentPair.img2;
         var displayOne=document.getElementById('img1');
         displayOne.src=imageOne;
+        displayOne.alt='Image One';
         var displayTwo=document.getElementById('img2');
         displayTwo.src=imageTwo;
-
+        displayTwo.alt='Image Two';
     } else if (level === "difficult"){
-        currentArray=difficultOne;
+        let currentArray=difficultOne;
         rand=Math.floor(Math.random()*currentArray.length);
         currentPair=currentArray[rand];
         imageOne=currentPair.img1;
         imageTwo=currentPair.img2;
         displayOne=document.getElementById('img1');
         displayOne.src=imageOne;
+        displayOne.alt='Image One';
         displayTwo=document.getElementById('img2');
         displayTwo.src=imageTwo;
-
+        displayTwo.alt='Image Two';
     } else if (level === "impossible"){
         currentArray=impossibleOne;
         rand=Math.floor(Math.random()*currentArray.length);
@@ -161,8 +164,10 @@ function mainGame(level){
         imageTwo=currentPair.img2;
         displayOne=document.getElementById('img1');
         displayOne.src=imageOne;
+        displayOne.alt='Image One';
         displayTwo=document.getElementById('img2');
         displayTwo.src=imageTwo;
+        displayTwo.alt='Image Two';
     }
 }
 
@@ -170,6 +175,7 @@ let answerBtn=document.getElementsByClassName('idn-btn');
 for (let button of answerBtn){
     button.addEventListener('click',function(){
         let userAnswer = this.getAttribute("button-type")
+        // console.log(userAnswer);
         if (userAnswer === "identical" && currentPair.same === 'Y'){
             scoreCheck(level);
             round();
@@ -183,6 +189,16 @@ for (let button of answerBtn){
     return
         }
     })
+ 
+}
+
+function round(){
+    currentRound+=1;
+    console.log(currentRound)
+    if (currentRound===maxNumOfRounds){
+        alert(`You tried the ${level} level and got ${scoreVal}! Why not give the other levels a go?` )
+        location.reload();
+    }
 }
 
 function scoreCheck(level){
@@ -196,146 +212,4 @@ function scoreReset(){
     document.getElementById('score').innerText = "0";
 }
 
-function round(){
-    currentRound+=1;
-    console.log(currentRound)
-    if (currentRound===maxNumOfRounds){
-        alert(`You tried the ${level} level! Why not give the others a go?` )
-        scoreReset();
-    }
-}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function gradeAnswer(){
-    
-// }
-
-
-
-// function displayEasy(myArray){
-//     for (j=0;j<myArray.length;j++){
-//         let round = easyOne[myArray[j]]
-//         console.log(round); 
-//         console.log(round.img1);
-//         let firstImage=document.getElementById('img1').src = round.img1
-//         let secondImage=document.getElementById('img2').src = round.img2
-//         console.log(firstImage);
-//         console.log(secondImage);
-//         function gradeScore(){
-//             let y=round.same;
-//             if(btnClicked ==="identical" && y==="Y"){
-//                 let oldScore = parseInt(document.getElementById("score").innerText);
-//                 document.getElementById("score").innerText = ++oldScore
-//             } else if (btnClicked === "notidentical" && y === "Y"){
-//                 alert("Try again!");
-//             } else if (btnClicked === "identical" && y === "N"){
-//                 alert("Try again!");
-//             } else if (btnClicked === "notidentical" && y === "N"){
-//                 let oldScore = parseInt(document.getElementById("score").innerText);
-//                 document.getElementById("score").innerText = ++oldScore
-//             }
-//         }
-//         gradeScore()
-//     }
-// }
-// function displayDifficult(){
-
-// }
-
-// function displayImpossible(){
-
-// }
