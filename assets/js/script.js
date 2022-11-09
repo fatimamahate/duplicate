@@ -71,8 +71,10 @@ function mainGame(level){
         let userAnswer = this.getAttribute("button-type")
         if (userAnswer === "identical" && currentPair.same === true){
             scoreCheck();
+            mainGame(level)
         } else if(userAnswer === "notidentical" && currentPair.same === false){
             scoreCheck();
+            mainGame(level)
         } else {
             alert('You got it wrong!')
             scoreVal=parseInt(document.getElementById('score').innerText);
@@ -85,7 +87,6 @@ function scoreCheck(){
    scoreVal=parseInt(document.getElementById('score').innerText);
     document.getElementById('score').innerText = ++scoreVal;
 }
-
 }
 
 
