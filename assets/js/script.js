@@ -4,24 +4,24 @@
 let easyOne=[
 {img1:'./assets/images/easy/0.png',
 img2:'./assets/images/easy/0.png',
-same: true},
+same: 'Y'},
 {img1:'./assets/images/easy/1_1.png',
 img2:'./assets/images/easy/1_2.png',
-same:false},
+same:'N'},
 {img1:'./assets/images/easy/2.png',
 img2:'./assets/images/easy/2.png',
-same:true},
+same:'Y'},
 {img1:'./assets/images/easy/3_1.png',
 img2:'./assets/images/easy/3_2.png',
-same:false},
+same:'N'},
 {img1:'./assets/images/easy/4_1.png',
 img2:'./assets/images/easy/4_2.png',
-same: false},
+same: 'N'},
 {img1:'./assets/images/easy/5_1.png',
 img2:'./assets/images/easy/5_2.png',
-same:false}]
+same:'N'}]
 
-
+var level;
 
 document.addEventListener("DOMContentLoaded",function(){
     let choices = document.getElementsByClassName("diff");
@@ -29,14 +29,17 @@ document.addEventListener("DOMContentLoaded",function(){
     for (let choice of choices){
         choice.addEventListener("click", function() {
             if (this.getAttribute("data-type") === "easy") {
-               var level='easy';
+               level='easy';
                mainGame(level)
+               scoreReset();
             } else if (this.getAttribute("data-type") === "difficult") {
-               var level='difficult';
+               level='difficult';
                mainGame(level)
+               scoreReset();
             } else if (this.getAttribute("data-type") === "impossible") {
-               var level='impossible';
+               level='impossible';
                mainGame(level)
+               scoreReset();
             }
         });
     }
@@ -54,6 +57,7 @@ let scoreVal;
 function mainGame(level){
     // randomPair(level);
     if (level === "easy"){
+        scoreVal=0;
         currentArray=easyOne;
         let rand=Math.floor(Math.random()*currentArray.length);
         currentPair=currentArray[rand];
@@ -70,26 +74,33 @@ let answerBtn=document.getElementsByClassName('idn-btn');
 for (let button of answerBtn){
     button.addEventListener('click',function(){
         let userAnswer = this.getAttribute("button-type")
-        if (userAnswer === "identical" && currentPair.same === true){
-            scoreCheck();
-            mainGame(level)
-        } else if(userAnswer === "notidentical" && currentPair.same === false){
-            scoreCheck();
-            mainGame(level)
+        if (userAnswer === "identical" && currentPair.same === 'Y'){
+            scoreCheck(level);
+            
+        } else if(userAnswer === "notidentical" && currentPair.same === 'N'){
+            scoreCheck(level);
+            
         } else {
             alert('You got it wrong!')
-            scoreVal=parseInt(document.getElementById('score').innerText);
-            document.getElementById('score').innerText = --scoreVal;
+            mainGame(level)
     return
         }
     })
 }
-
-
-function scoreCheck(){
+function scoreCheck(level){
     scoreVal=parseInt(document.getElementById('score').innerText);
+    console.log(scoreVal)
     document.getElementById('score').innerText = ++scoreVal;
+    mainGame(level)
 }
+
+function scoreReset(){
+    // scoreVal=parseInt(document.getElementById('score').innerText);
+    document.getElementById('score').innerText = "0";
+}
+
+
+
 
 
 
