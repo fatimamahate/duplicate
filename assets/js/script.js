@@ -57,7 +57,6 @@ const maxNumOfRounds = 5;
  * The full game is run in the main game function
  */
 function mainGame(level){
-    // randomPair(level);
     if (level === "easy"){
         currentArray=easyOne;
         let rand=Math.floor(Math.random()*currentArray.length);
@@ -90,6 +89,7 @@ for (let button of answerBtn){
         
     })
 }
+
 function scoreCheck(level){
     scoreVal=parseInt(document.getElementById('score').innerText);
     console.log(scoreVal)
