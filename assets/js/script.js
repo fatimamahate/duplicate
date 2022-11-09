@@ -94,8 +94,7 @@ img2:'./assets/images/impossible/8_2.png',
 same:'N'},
 {img1:'./assets/images/impossible/9.png',
 img2:'./assets/images/impossible/9.png',
-same:'Y'},
-]
+same:'Y'}]
 var level;
 
 document.addEventListener("DOMContentLoaded",function(){
@@ -142,25 +141,27 @@ function mainGame(level){
         displayOne.src=imageOne;
         var displayTwo=document.getElementById('img2');
         displayTwo.src=imageTwo;
+
     } else if (level === "difficult"){
         currentArray=difficultOne;
-        let rand=Math.floor(Math.random()*currentArray.length);
+        rand=Math.floor(Math.random()*currentArray.length);
         currentPair=currentArray[rand];
-        let imageOne=currentPair.img1;
-        let imageTwo=currentPair.img2;
-        var displayOne=document.getElementById('img1');
+        imageOne=currentPair.img1;
+        imageTwo=currentPair.img2;
+        displayOne=document.getElementById('img1');
         displayOne.src=imageOne;
-        var displayTwo=document.getElementById('img2');
+        displayTwo=document.getElementById('img2');
         displayTwo.src=imageTwo;
+
     } else if (level === "impossible"){
         currentArray=impossibleOne;
-        let rand=Math.floor(Math.random()*currentArray.length);
+        rand=Math.floor(Math.random()*currentArray.length);
         currentPair=currentArray[rand];
-        let imageOne=currentPair.img1;
-        let imageTwo=currentPair.img2;
-        var displayOne=document.getElementById('img1');
+        imageOne=currentPair.img1;
+        imageTwo=currentPair.img2;
+        displayOne=document.getElementById('img1');
         displayOne.src=imageOne;
-        var displayTwo=document.getElementById('img2');
+        displayTwo=document.getElementById('img2');
         displayTwo.src=imageTwo;
     }
 }
