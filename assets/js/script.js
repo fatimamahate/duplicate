@@ -105,7 +105,7 @@ function round(){
     currentRound+=1;
     console.log(currentRound)
     if (currentRound===maxNumOfRounds){
-        alert(`You got ${scoreVal}/5` )
+        alert(`You got ${scoreVal}/5!` )
         scoreReset();
     }
 }
