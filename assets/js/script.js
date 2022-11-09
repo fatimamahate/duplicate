@@ -17,9 +17,53 @@ same:'N'},
 {img1:'./assets/images/easy/4_1.png',
 img2:'./assets/images/easy/4_2.png',
 same: 'N'},
-{img1:'./assets/images/easy/5_1.png',
-img2:'./assets/images/easy/5_2.png',
+{img1:'./assets/images/easy/5.png',
+img2:'./assets/images/easy/5.png',
+same:'Y'},
+{img1:'./assets/images/easy/6_1.png',
+img2:'./assets/images/easy/6_2.png',
+same:'N'},
+{img1:'./assets/images/easy/7_1.png',
+img2:'./assets/images/easy/7_2.png',
+same:'N'},
+{img1:'./assets/images/easy/8.png',
+img2:'./assets/images/easy/8.png',
+same:'Y'},
+{img1:'./assets/images/easy/9_1.png',
+img2:'./assets/images/easy/9_2.png',
 same:'N'}]
+
+let difficultOne=[
+    {img1:'./assets/images/difficult/0.png',
+    img2:'./assets/images/difficult/0.png',
+    same: 'Y'},
+    {img1:'./assets/images/difficult/1_1.png',
+    img2:'./assets/images/difficult/1_2.png',
+    same:'N'},
+    {img1:'./assets/images/difficult/2_1.png',
+    img2:'./assets/images/difficult/2_2.png',
+    same:'N'},
+    {img1:'./assets/images/difficult/3_1.png',
+    img2:'./assets/images/difficult/3_2.png',
+    same:'N'},
+    {img1:'./assets/images/difficult/4.png',
+    img2:'./assets/images/difficult/4.png',
+    same: 'Y'},
+    {img1:'./assets/images/difficult/5.png',
+    img2:'./assets/images/difficult/5.png',
+    same:'Y'},
+    {img1:'./assets/images/difficult/6_1.png',
+    img2:'./assets/images/difficult/6_2.png',
+    same:'N'},
+    {img1:'./assets/images/difficult/7.png',
+    img2:'./assets/images/difficult/7.png',
+    same:'Y'},
+    {img1:'./assets/images/difficult/8.png',
+    img2:'./assets/images/difficult/8.png',
+    same:'Y'},
+    {img1:'./assets/images/difficult/9_1.png',
+    img2:'./assets/images/difficult/9_2.png',
+    same:'N'}]
 
 var level;
 
@@ -49,7 +93,7 @@ let currentPair;
 let currentArray;
 let scoreVal;
 let currentRound=0;
-const maxNumOfRounds = 5;
+const maxNumOfRounds=5;
 
 
 
@@ -59,6 +103,26 @@ const maxNumOfRounds = 5;
 function mainGame(level){
     if (level === "easy"){
         currentArray=easyOne;
+        let rand=Math.floor(Math.random()*currentArray.length);
+        currentPair=currentArray[rand];
+        let imageOne=currentPair.img1;
+        let imageTwo=currentPair.img2;
+        var displayOne=document.getElementById('img1');
+        displayOne.src=imageOne;
+        var displayTwo=document.getElementById('img2');
+        displayTwo.src=imageTwo;
+    } else if (level === "difficult"){
+        currentArray=difficultOne;
+        let rand=Math.floor(Math.random()*currentArray.length);
+        currentPair=currentArray[rand];
+        let imageOne=currentPair.img1;
+        let imageTwo=currentPair.img2;
+        var displayOne=document.getElementById('img1');
+        displayOne.src=imageOne;
+        var displayTwo=document.getElementById('img2');
+        displayTwo.src=imageTwo;
+    } else if (level === "impossible"){
+        currentArray=impossibleOne;
         let rand=Math.floor(Math.random()*currentArray.length);
         currentPair=currentArray[rand];
         let imageOne=currentPair.img1;
@@ -86,7 +150,6 @@ for (let button of answerBtn){
             round();
     return
         }
-        
     })
 }
 
@@ -105,7 +168,7 @@ function round(){
     currentRound+=1;
     console.log(currentRound)
     if (currentRound===maxNumOfRounds){
-        alert(`You got ${scoreVal}/5!` )
+        alert(`You tried the ${level} level! Why not give the others a go?` )
         scoreReset();
     }
 }
