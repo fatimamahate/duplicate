@@ -124,11 +124,8 @@
     let currentArray;
     let scoreVal;
     let currentRound=0;
-    var displayOne;
-    var displayTwo;
-    const maxNumOfRounds=6;
     
-    
+    const maxNumOfRounds=5;
     
     /**
      * The full game is run in the main game function
@@ -137,16 +134,16 @@
         currentRound+=1;
         console.log(currentRound);
         if (currentRound===maxNumOfRounds){
-        alert(`You tried the ${level} level and got ${scoreVal}! Why not give the other levels a go?` );
+            alert(`You tried the ${level} level and got ${scoreVal+1}! Why not give the other levels a go?`);
             location.reload();   
         }
     }
     
-    function scoreCheck(level){
+    function scoreCheck(){
         scoreVal=parseInt(document.getElementById('score').innerText);
         console.log(scoreVal);
         document.getElementById('score').innerText = ++scoreVal;
-        mainGame(level);
+        ;
     }
     
     function scoreReset(){
@@ -154,20 +151,22 @@
     }
     
     function mainGame(level){
+    var displayOne;
+    var displayTwo;
         if (level === "easy"){
             currentArray=easyOne;
             let rand=Math.floor(Math.random()*currentArray.length);
             currentPair=currentArray[rand];
             let imageOne=currentPair.img1;
             let imageTwo=currentPair.img2;
-            var displayOne=document.getElementById('img1');
+            displayOne=document.getElementById('img1');
             displayOne.src=imageOne;
             displayOne.alt='Image One';
-            var displayTwo=document.getElementById('img2');
+            displayTwo=document.getElementById('img2');
             displayTwo.src=imageTwo;
             displayTwo.alt='Image Two';
         } else if (level === "difficult"){
-            let currentArray=difficultOne;
+            currentArray=difficultOne;
             let rand=Math.floor(Math.random()*currentArray.length);
             currentPair=currentArray[rand];
             let imageOne=currentPair.img1;
@@ -201,9 +200,11 @@
             if (userAnswer === "identical" && currentPair.same === 'Y'){
                 round();
                 scoreCheck(level);
+                mainGame(level);
             } else if(userAnswer === "notidentical" && currentPair.same === 'N'){
                 round();
                 scoreCheck(level);
+                mainGame(level);
             } else {
                 alert('You got it wrong!');
                 round();
