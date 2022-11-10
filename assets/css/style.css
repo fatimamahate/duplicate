@@ -81,7 +81,7 @@ h1{
 }
 
 .idn-btn:hover{
-    border: 0.3rem solid;
+    outline: 0.3rem solid;
 }
 
 .identical{
@@ -117,11 +117,17 @@ h1{
 }
 
 .image-container{
-    /* box-sizing: border-box; */
     height: 22vh;
-    /* border: 1px solid black; */
     margin-top: 20px;
 }
 
+@media only screen and (max-width:425px){
+    h1{
+        font-family: 'Fredoka One', cursive;
+        text-align: center;
+        font-size: 1rem;
+        
+    }
+}
 
 
