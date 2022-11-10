@@ -42,7 +42,6 @@ or text */
 /* the image pair is in the center */
 #img1, #img2{
     margin: 1%;
-    width:50%;
 }
 
 /* All difficulty buttons look the same ...*/
