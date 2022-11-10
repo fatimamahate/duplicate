@@ -134,6 +134,10 @@ or text */
     font-size: 1.5rem;
 }
 
+#purchase > a{
+ color: inherit;
+}
+
 /* media queries for 700px, 390px,360px */
 @media screen and (max-width:700px){
     h1{
