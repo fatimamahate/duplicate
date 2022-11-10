@@ -68,6 +68,27 @@ There is also an instruction which is one of the first things
 * JavaScript (ES6-2015)
 
 ## Testing
+### Functionality
+* The table below shows the test for functionality of each interactive element
+
+| Test  | Action   | Expected Outcome  | Actual Outcome  ||
+|---|---|---|---|---|
+|  Easy, Difficult,Impossible Buttons Hover |Hover over level buttons   |background,font colours change with a border   |  Pass |   |
+|Identical/not identical Buttons Hover   | hover over button  | font colour change, background colour change, border   |Pass   |   |
+| Easy button-click  |User clicks on easy button   |  Random picture is generated from easyOne variable or if in the middle of a game, game refreshes| Pass  |   |
+| Difficult button-click  |User clicks on difficult button   |  Random picture is generated from difficultOne variable or if in the middle of a game, game refreshes| Pass  |   |
+| Impossible button-click  |User clicks on impossible button   |  Random picture is generated from impossibleOne variable or if in the middle of a game, game refreshes| Pass  |   |
+|Identical button-click   |User clicks on Identical   |  If correct move to next image set else an alert  |  Pass |   |
+Not Identical button-click   |User clicks on Not Identical   |  If correct move to next image set else an alert  |  Pass |   |
+| Linked text-The Board Room  |User clicks on The Board Room text   |  Takes you to [The Board Room](https://fatimamahate.github.io/theboardroom/) site. | Pass  |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+### Browsers
+* It was tested on Internet Edge and Google Chrome. 
+### Responsive Media
+* There are 3 media queries at 700px, 420px, and 360px.
+* The site was tested on a large laptop at 1440px, a tablet at 768px, a phone at 425px and a mobile phone at 320px. 
 
 ## Deployment
 ### Deploy
