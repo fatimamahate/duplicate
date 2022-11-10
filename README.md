@@ -42,8 +42,8 @@ Users of the website will
 There is also an instruction which is one of the first things  
 ##### Score Area
 * The Score area is included so that the user can see the score they have obtained.  
-##### Purchase
-* The online game can also have a corresponding card game which can be purchased on the link provided for Amazon. 
+##### Play the Game
+* The online game can also have a corresponding card game which can be played at The Board Room. 
 ### Future
 * Introduce a second page that sells card games instead of linking to another website.
 * Introduce event listeners for keyboard inputs.
