@@ -111,12 +111,14 @@ Not Identical button-click   |User clicks on Not Identical   |  If correct move 
  ![phone](./documentation/testing/375.JPG)
 
  ## Validation
- * HTML Validation results
+ * [HTML](https://validator.w3.org/) Validation results
  ![HTML Validation](./documentation/validation/html-validation.JPG)
- * CSS Validation results
+ * [CSS](https://jigsaw.w3.org/css-validator/) Validation results
  ![CSS Validation](./documentation/validation/css-validation.JPG)
- * JavaScript Validation results
+ * [JavaScript](https://jshint.com/) Validation results
  ![JavaScript Validation](./documentation/validation/js-validation.JPG)
+ 
+ Line 1 of .js file ensures no warnings come up on the validation. 
 
 
 
@@ -174,6 +176,7 @@ h1{
 ```
 
 ### Images
-* The images were designed by [myself](https://github.com/fatimamahate/duplicate) using the Microsoft Paint Software. 
+* The images were created by [myself](https://github.com/fatimamahate/duplicate) using the Microsoft Paint Software. 
+
 ## Acknowledgements
 A very big thank you to my mentor, Brian Macharia, for providing invaluable advice throughout the project. 
