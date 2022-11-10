@@ -30,30 +30,40 @@ Users of the website will
 #### Feature 1: Header
 * The header includes the title of the game using the font Fredoka One from [Google Fonts](https://fonts.google.com/) with two similar copy signs from [Font Awesome](https://fontawesome.com/). The copy signs are not exactly the same to show that they are not identical.  
 
+![Header Image](./documentation/features/header.JPG)
+
 #### Feature 2: Difficulty Buttons
 * Directly below the header are the difficulty levels. 
 * The user can hover over the button so that the user knows it is clickable. 
 * The colour of the difficulty buttons are different shades of the main background colour (#EEA47FFF) and increase in saturation the higher the difficulty gets. 
 * These buttons can also be used as reset buttons should the user wish to start again or if the round has been complete. 
+![Difficulty Buttons Image](./documentation/features/difficulty-buttons.JPG)
 
-#### Feature 3: Question and Score Area
+#### Feature 3: Identical and Not Identical Buttons
+* These allow the user to answer whether the images are identical or not. If the user is incorrect an alert will come up.
+
+#### Feature 4: Question and Score Area
 ##### Question & Instruction
 * The game is fairly simple, are the images identical or not? Therefore, a question is added so the user can understand the game.
 There is also an instruction which is one of the first things  
 ##### Score Area
-* The Score area is included so that the user can see the score they have obtained.  
+* The Score area is included so that the user can see the score they have obtained. An alert also comes up. 
 ##### Play the Game
 * The online game can also have a corresponding card game which can be played at The Board Room. 
+![Question, Instruction, Score Area Image](./documentation/features/main-game.JPG)
 ### Future
 * Introduce a second page that sells card games instead of linking to another website.
 * Introduce event listeners for keyboard inputs.
-* Add a div or another page describing all the keys needed for the above event listeners. 
+* Add a div or another page describing all the keys needed for the above future event listeners. 
 
 ## Design 
 * Throughout the entire game, predominantly only 2 colours have been used - #EEA47FFF for the background colour and #00539CFF for the text and header.
 * The score area has the same colours but in the reverse order whereby #EEA47FFF is used for the text and #00539CFF is used for the background colour.
 * The exception to the above however is the not identical and identical buttons. These are brightly red (#880808) and green (#228B22) respectively. This is to ensure contrast between background and to differentiate between these buttons and the difficulty level buttons. 
-* All buttons have a hover feature which introduces a border and changes background colour. and the user can be sure of the button they have clicked on. 
+* All buttons have a hover feature which introduces a border and changes background colour. The user can be sure of the button they have clicked on. 
+![Easy Hover](./documentation/design/easy-hover.png)
+![Difficult Hover](./documentation/design/difficult-hover.png)
+![Impossible Hover](./documentation/design/impossible-hover.png)
 * The link to amazon is within the sentence asking users to check out the corresponding card game. The colour was changed to inherit the colour from its parents but the underline still remains. This makes it obvious to the user that the word/name is a clickable link.  
 
 ## Technologies Used
@@ -81,14 +91,20 @@ There is also an instruction which is one of the first things
 |Identical button-click   |User clicks on Identical   |  If correct move to next image set else an alert  |  Pass |   |
 Not Identical button-click   |User clicks on Not Identical   |  If correct move to next image set else an alert  |  Pass |   |
 | Linked text-The Board Room  |User clicks on The Board Room text   |  Takes you to [The Board Room](https://fatimamahate.github.io/theboardroom/) site. | Pass  |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
+### Bugs
+* Currently, in some instances, the screen does not update the score however in the DOM it has been updated. Hence, the alert picks up the value in the DOM which may not be the same as the screen. The correct score is the one in the alert since this takes the value from the DOM. Straight after closing the alert, the score will update on the screen but since the game is designed to refresh after a certain number of rounds, this does not last long.
+
+![Score bug](./documentation/testing/score-bug.JPG)
 ### Browsers
 * It was tested on Internet Edge and Google Chrome. 
 ### Responsive Media
 * There are 3 media queries at 700px, 420px, and 360px.
-* The site was tested on a large laptop at 1440px, a tablet at 768px, a phone at 425px and a mobile phone at 320px. 
+* The site was tested on a large laptop at 1440px, a tablet at 768px, and a mobile phone at 375px. 
+
+* 1440px
+ ![laptop](./documentation/testing/1440.JPG)
+ ![tablet](./documentation/testing/768.JPG)
+ ![phone](./documentation/testing/375.JPG)
 
 ## Deployment
 ### Deploy
