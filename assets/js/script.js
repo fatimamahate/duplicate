@@ -275,7 +275,8 @@ function mainGame(level) {
 let answerBtn = document.getElementsByClassName('idn-btn');
 for (let button of answerBtn) {
     button.addEventListener('click', function() {
-        let userAnswer = this.getAttribute("button-type");
+        let userAnswer = this.getAttribute("id");
+        console.log(userAnswer);
         if (userAnswer === "identical" && currentPair.same === 'Y') {
             roundCorrect();
             scoreCheck(level);
