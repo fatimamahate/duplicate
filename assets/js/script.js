@@ -1,8 +1,7 @@
 /** 
  * Add all image pairs for the easy difficulty as objects with information on whether they match
  */
-//  import Swal from 'sweetalert2'
-const Swal = require('sweetalert2')
+
  let easyOne=[
     {img1:'./assets/images/easy/0.png',
     img2:'./assets/images/easy/0.png',
@@ -142,7 +141,7 @@ const Swal = require('sweetalert2')
         currentRound+=1;
         console.log(currentRound);
         if (currentRound===maxNumOfRounds){
-            Swal.fire(`You tried the ${level} level and got ${scoreVal+1}! Why not give the other levels a go?`);
+            alert(`You tried the ${level} level and got ${scoreVal+1}! Why not give the other levels a go?`);
             location.reload();   
         }
     }
@@ -151,7 +150,7 @@ const Swal = require('sweetalert2')
         currentRound+=1;
         console.log(currentRound);
         if (currentRound===maxNumOfRounds){
-            Swal.fire(`You tried the ${level} level and got ${scoreVal}! Why not give the other levels a go?`);
+            alert(`You tried the ${level} level and got ${scoreVal}! Why not give the other levels a go?`);
             location.reload();   
         }
     }

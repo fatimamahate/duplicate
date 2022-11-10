@@ -33,7 +33,6 @@ h1{
     justify-content: center
 }
 #img1, #img2{
-    /* width:auto; */
     margin: 1%
 }
 
@@ -72,7 +71,7 @@ h1{
 
 .idn-btn{  
     border: 0;
-    margin:0 10px 0 10px;
+    margin:0 10px 10px 10px;
     border-radius: 45%;
     width:30%;
     padding: 3rem 0 3rem 0;
@@ -121,11 +120,39 @@ h1{
     margin-top: 20px;
 }
 
-@media screen and (max-width:425px){
+@media screen and (max-width:700px){
     h1{
-        font-size: 1rem;
-        color:red;
+        font-size: 3rem;
     }
+
+    .diff{
+       
+        font-size:100%;
+        
+    }
+
+    .diff:hover{
+        border: 5px solid #00539CFF;
+        color:#00539CFF;
+        font-weight: normal;
+    }
+
+    .idn-btn{
+        font-size: 100%;
+    }
+}
+
+@media screen and (max-width:380px){
+
+
+    .diff-impossible{
+       
+        font-size:100%;
+        
+    }
+
+
+
 }
 
 
