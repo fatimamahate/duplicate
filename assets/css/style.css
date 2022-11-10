@@ -18,7 +18,7 @@ or text */
 .main-game{
     box-sizing: border-box;
     width: 85%;
-    height: 5vh;
+    height: 1vh;
     max-height: 450px;
     max-width: 830px;
     margin-left: auto;
@@ -128,6 +128,10 @@ or text */
     font-size:2rem;
     color:#EEA47FFF;
     background-color: #00539CFF;
+}
+#purchase{
+    text-align: center;
+    font-size: 1.5rem;
 }
 
 /* media queries for 700px, 390px,360px */
