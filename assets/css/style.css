@@ -41,7 +41,8 @@ or text */
 
 /* the image pair is in the center */
 #img1, #img2{
-    margin: 1%
+    margin: 1%;
+    width:50%;
 }
 
 /* All difficulty buttons look the same ...*/
@@ -132,7 +133,6 @@ or text */
 #ext-web{
     text-align: center;
     font-size: 1.5rem;
-   bottom: 30px;
 }
 
 #ext-web> a{
@@ -161,9 +161,12 @@ or text */
     }
 }
 
-@media screen and (max-width:390px){
+@media screen and (max-width:420px){
     .diff-impossible{
         font-size:90%;
+    }
+    #img1, #img2{
+        width:50%;
     }
 }
 
@@ -183,5 +186,6 @@ or text */
     .instruction{
         font-size:1rem;
     }
+    
 }
 
