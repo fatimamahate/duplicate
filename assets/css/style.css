@@ -1,3 +1,5 @@
+/* Body-has the same font throughout and same colour throughout 
+h1-the only text that is different to make it obvious that it is a header*/
 body{
     background-color:#EEA47FFF;
     color:#00539CFF;
@@ -11,6 +13,8 @@ h1{
     font-size: 4rem;
 }
 
+/* main-game is contained within the middle 85% of the screen and contains divs directly related to any buttons, images 
+or text */
 .main-game{
     box-sizing: border-box;
     width: 85%;
@@ -22,18 +26,25 @@ h1{
     padding: 1%;
 }
 
+/* container for difficulty levels */
 .play-container{
   text-align:center;
 }
 
+/* container for images */
 .image-container{
     display: flex;
-    justify-content: center
+    justify-content: center;
+    height: 22vh;
+    margin-top: 20px;
 }
+
+/* the image pair is in the center */
 #img1, #img2{
     margin: 1%
 }
 
+/* All difficulty buttons look the same ...*/
 .diff{
     border: 0.5rem solid;
     margin:0 10px 0 10px;
@@ -45,6 +56,7 @@ h1{
     background-color: #00539CFF;
 }
 
+/*...unless the user hovers, the background color changes depending on difficulty level*/
 .diff:hover{
     color:#00539CFF;
     font-weight: bold;
@@ -62,6 +74,7 @@ h1{
     background-color:rgb(202, 92, 41);
 }
 
+/* answer-area contains the identical/not identical buttons. Hover to change colors */
 .answer-area{
     text-align: center;
     margin:10px 30px 0 30px;
@@ -100,7 +113,7 @@ h1{
     color:#00539CFF;
     background-color: #EEA47FFF;
 }
-
+/* question and instruction are both text so remain with same view */
 .question{
     text-align: center;
     font-size:2rem;
@@ -109,20 +122,13 @@ h1{
     text-align: center;
     font-size:2rem;
 }
-
+/* colours are reversed for score contrast */
 .score-container{
     text-align: center;
     font-size:2rem;
     color:#EEA47FFF;
     background-color: #00539CFF;
 }
-
-.image-container{
-    height: 22vh;
-    margin-top: 20px;
-}
-
-
 
 /* media queries for 700px, 390px,360px */
 @media screen and (max-width:700px){
