@@ -110,7 +110,15 @@ Not Identical button-click   |User clicks on Not Identical   |  If correct move 
  * 375px
  ![phone](./documentation/testing/375.JPG)
 
- 
+ ## Validation
+ * HTML Validation results
+ ![HTML Validation](./documentation/validation/html-validation.JPG)
+ * CSS Validation results
+ ![CSS Validation](./documentation/validation/css-validation.JPG)
+ * JavaScript Validation results
+ ![JavaScript Validation](./documentation/validation/js-validation.JPG)
+
+
 
 ## Deployment
 ### Deploy
