@@ -6,7 +6,7 @@ Welcome to Duplicate. This game is a single-player matching game. The user will 
 
 The rules of the game is to simply identify if the pair of cards match or not and gain as many points as possible within 5 rounds.
 
-The market audience is predominantly anybody who wants to play a game. The easy level mainly catering towards younger children under the age of 5, the difficult level is aimed at children upto the age of 10 and the impossible level has no age limit! Of course these ages are only guidlines and truly all levels can be played by anyone who dares to give it a go.
+The market audience is predominantly anybody who wants to play a game. The easy level mainly catering towards younger children under the age of 5, the difficult level is aimed at children upto the age of 10 and the impossible level has no age limit! Of course these ages are only guidlines and truly all levels can be enjoyed by anyone who wants to play a game.
 
 ## Contents
 * [User Experience (UX)](#user-experience-ux) 
