@@ -61,9 +61,11 @@ There is also an instruction which is one of the first things
 * The score area has the same colours but in the reverse order whereby #EEA47FFF is used for the text and #00539CFF is used for the background colour.
 * The exception to the above however is the not identical and identical buttons. These are brightly red (#880808) and green (#228B22) respectively. This is to ensure contrast between background and to differentiate between these buttons and the difficulty level buttons. 
 * All buttons have a hover feature which introduces a border and changes background colour. The user can be sure of the button they have clicked on. 
+
 ![Easy Hover](./documentation/design/easy-hover.png)
 ![Difficult Hover](./documentation/design/difficult-hover.png)
 ![Impossible Hover](./documentation/design/impossible-hover.png)
+
 * The link to amazon is within the sentence asking users to check out the corresponding card game. The colour was changed to inherit the colour from its parents but the underline still remains. This makes it obvious to the user that the word/name is a clickable link.  
 
 ## Technologies Used
@@ -103,7 +105,9 @@ Not Identical button-click   |User clicks on Not Identical   |  If correct move 
 
 * 1440px
  ![laptop](./documentation/testing/1440.JPG)
+* 768px
  ![tablet](./documentation/testing/768.JPG)
+ * 375px
  ![phone](./documentation/testing/375.JPG)
 
 ## Deployment
