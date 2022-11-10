@@ -129,12 +129,12 @@ or text */
     color:#EEA47FFF;
     background-color: #00539CFF;
 }
-#purchase{
+#ext-web{
     text-align: center;
     font-size: 1.5rem;
 }
 
-#purchase > a{
+#ext-web> a{
  color: inherit;
 }
 
