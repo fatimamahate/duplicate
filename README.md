@@ -110,6 +110,8 @@ Not Identical button-click   |User clicks on Not Identical   |  If correct move 
  * 375px
  ![phone](./documentation/testing/375.JPG)
 
+ 
+
 ## Deployment
 ### Deploy
 * To deploy the site, first go to the GitHub repository.
