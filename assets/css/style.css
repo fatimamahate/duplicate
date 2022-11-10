@@ -122,6 +122,9 @@ h1{
     margin-top: 20px;
 }
 
+
+
+/* media queries for 700px, 390px,360px */
 @media screen and (max-width:700px){
     h1{
         font-size: 3rem;

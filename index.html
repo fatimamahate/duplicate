@@ -7,14 +7,18 @@
     <meta name="description" content="Matching Card Game">
     <meta name="keywords" content="Card, Game, Identical,Duplicate">
     <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Fredoka+One&display=swap" rel="stylesheet">
-    
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Duplicate</title>
 </head>
 <body>
     <h1><i class="fa-solid fa-clone"></i> Duplicate <i class="fa-regular fa-clone"></i></h1>
+    
+    <!-- main-game- the container which contains the whole game -->
     <div class="main-game">
+        
+        <!-- Instruction-tells user choose a level. -->
         <p class = "instruction">Choose a level:</p>
+        <!-- play-container- contains all of the buttons to do with the difficulty levels -->
         <div class = "play-container">
             <button type="button" data-type="easy" class="diff diff-btn diff-easy">
                 Easy
@@ -26,6 +30,11 @@
                 Impossible
             </button>
         </div>
+        <!-- question-asks user to check if images are identical
+        score-container- includes the user score which should iterte using script.js file 
+        image-container- contains two <img> tags with src and alt attributes empty. 
+        Look at script.js to see how it will be edited.
+        answer-area- includes two buttons for identical and not identical-->
         <p class = "question">Are these images identical?</p>
         <div class = "score-container">
             Score: <span id="score">0</span>
@@ -44,8 +53,9 @@
                 Not Identical
             </button>
         </div>
+       
     </div>
-    <!--  -->
+    <!-- links to script.js and fontawsome fonts -->
     <script src="https://kit.fontawesome.com/acf23d3677.js" crossorigin="anonymous"></script>
     <script src="assets/js/script.js"></script>
 </body>
