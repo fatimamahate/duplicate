@@ -132,10 +132,12 @@ or text */
 #ext-web{
     text-align: center;
     font-size: 1.5rem;
+   bottom: 30px;
 }
 
 #ext-web> a{
  color: inherit;
+ 
 }
 
 /* media queries for 700px, 390px,360px */
