@@ -2,7 +2,7 @@ body{
     background-color:#EEA47FFF;
     color:#00539CFF;
     font-family:  'Didact Gothic', sans-serif;
-     font-weight: bold; 
+    font-weight: bold; 
 }
 
 h1{
@@ -14,7 +14,7 @@ h1{
 .main-game{
     box-sizing: border-box;
     width: 85%;
-    height: 6vh;
+    height: 5vh;
     max-height: 450px;
     max-width: 830px;
     margin-left: auto;
@@ -25,8 +25,6 @@ h1{
 .play-container{
   text-align:center;
 }
-
- 
 
 .image-container{
     display: flex;
@@ -107,6 +105,10 @@ h1{
     text-align: center;
     font-size:2rem;
 }
+.instruction{
+    text-align: center;
+    font-size:2rem;
+}
 
 .score-container{
     text-align: center;
@@ -126,9 +128,7 @@ h1{
     }
 
     .diff{
-       
         font-size:100%;
-        
     }
 
     .diff:hover{
@@ -142,17 +142,27 @@ h1{
     }
 }
 
-@media screen and (max-width:380px){
-
-
+@media screen and (max-width:390px){
     .diff-impossible{
-       
-        font-size:100%;
-        
+        font-size:90%;
     }
-
-
-
 }
 
+@media screen and (max-width:360px){
+    h1{
+        font-size: 2rem;
+    }
+    .diff-impossible{
+        font-size:80%;
+    }
+    .idn-btn{
+        font-size: 80%;
+    }
+    .question{
+        font-size:1rem;
+    }
+    .instruction{
+        font-size:1rem;
+    }
+}
 
