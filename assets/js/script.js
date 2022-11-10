@@ -223,7 +223,9 @@ function roundIncorrect() {
 function scoreReset() {
     document.getElementById('score').innerText = "0";
 }
-/**game is mainly run through mainGame which takes the difficuty level from event listener as an input */
+/**game is mainly run through mainGame which takes the difficuty level from event listener as an input and chooses
+ * randomly the object. displayOne gets the URL and puts into the img tags on html page
+*/
 function mainGame(level) {
     var displayOne;
     var displayTwo;
